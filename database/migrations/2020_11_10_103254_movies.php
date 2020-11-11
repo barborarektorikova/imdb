@@ -18,7 +18,7 @@ class Movies extends Migration
             $table->unsignedBigInteger('movie_type_id');
             $table->unsignedBigInteger('movie_status_id');
             $table->string('name');
-            $table->integer('lenght');
+            $table->integer('length');
             $table->year('year');
             $table->year('start_year');
             $table->year('end_year');
