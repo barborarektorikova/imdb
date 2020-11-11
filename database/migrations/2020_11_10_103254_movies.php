@@ -15,21 +15,20 @@ class Movies extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->id();
-            $table->('movie_type_id') unsigned big integer
-            $table->movie_status_id unsigned big integer
-            $table->name string
-            $table->length integer
-            $table->year year
-            $table->start_year year
-            $table->end_year year
-            $table->rating float
-            $table->votes_nr integer
-            $table->metascore integer
-            $table->certification_id unsigned big integer
-            $table->budget unsigned big integer
-            $table->budget_currency string
-            $table->color_code string
+            $table->unsignedBigInteger('movie_type_id');
+            $table->unsignedBigInteger('movie_status_id');
+            $table->string('name');
+            $table->integer('lenght');
+            $table->year('year');
+            $table->year('start_year');
+            $table->year('end_year');
+            $table->float('rating');
+            $table->integer('votes_nr');
+            $table->integer('metascore');
+            $table->unsignedBigInteger('certification_id');
+            $table->unsignedBigInteger('budget');
+            $table->string('budget_currency');
+            $table->string('color_code');
         });
     }
 
